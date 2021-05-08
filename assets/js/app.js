@@ -98,7 +98,7 @@
 		if (latitude && longitude) apiData = `lat=${latitude}&lon=${longitude}`;
 
 		function getCurrentWeather() {
-			const url = `http://api.openweathermap.org/data/2.5/weather?${apiData}&appid=${apiKey}`;
+			const url = `https://api.openweathermap.org/data/2.5/weather?${apiData}&appid=${apiKey}`;
 
 			return fetch(url)
 				.then(response => response.json())
@@ -122,8 +122,8 @@
 		};
 
 		function getNextDaysWeather() {
-			const url = `http://api.openweathermap.org/data/2.5/forecast?${apiData}&appid=${apiKey}`;
-			
+			const url = `https://api.openweathermap.org/data/2.5/forecast?${apiData}&appid=${apiKey}`;
+
 			return fetch(url)
 				.then(response => response.json())
 				.then(data => {
