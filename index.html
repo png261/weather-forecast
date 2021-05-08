@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="loading">
+    <h3 class="loading__title">What's the weather?</h3>
+    <div class="loading__progressBar">
+      <div class="loading__progressBar-progress"></div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-toggle">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="sidebar-inner">
+      <div class="locate">
+        <div class="locate__city">
+          city
+          <span class="locate__city-current" contenteditable></span>
+        </div>
+        <button class="locate__change btn">change</button>
+      </div>
+
+      <div class="details">
+        <h3 class="title">Weather details</h3>
+        <div class="data-group">
+        </div>
+      </div>
+
+      <div class="temperature">
+        <h3 class="title">Temperature</h3>
+        <div id="chart">
+          <canvas></canvas>
+          <div class="tooltip" data="12">
+          </div>
+          <div class="scales"></div>
+        </div>
+      </div>
+
+      <div class="next-days">
+        <h3 class="title">Next days</h3>
+        <div class="data-group">
+        </div>
+      </div>
+    </div>
+
+    <div class="overlaps">
+    </div>
+  </div>
+  <header>
+    <div class="logo">
+      weather.
+    </div>
+  </header>
+
+  <div class="content">
+    <span id="current-temperature" data='32'></span>
+    <div id="advisement">
+      <p></p>
+      <span></span>
+    </div>
+  </div>
+
+  <footer>
+    <div id="current-time">
+    </div>
+    <div class="locate">
+      <div class="locate__city">
+        city
+        <span class="locate__city-current" contenteditable></span>
+      </div>
+      <button class="locate__change btn">change</button>
+    </div>
+  </footer>
+
+  </div>
+  <!-- SCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
